@@ -6,6 +6,9 @@ It uses Pocketshphinx and ffmpeg binraries for os x. To run on a linux server yo
 
 Pocketshphinx is set with American english dictionary.
 
+## Refactoring in progress
+
+Refactoring in progress, more info coming soon...
 
 ## Structure
 
