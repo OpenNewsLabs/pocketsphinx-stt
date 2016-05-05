@@ -1,4 +1,4 @@
-# Logs
+gs
 logs
 *.log
 npm-debug.log*
@@ -31,3 +31,10 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+
+# Video audio files
+*.mp4
+*.wav
+*.srt
+*.mp4.json
