@@ -2,7 +2,7 @@
   "name": "speech_to_text",
   "version": "1.0.0",
   "description": "pocketsphinx speech to text offline transcriber",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "node ./tests/test_main.js",
     "start": "node main.js"
