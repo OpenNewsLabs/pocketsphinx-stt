@@ -13,7 +13,7 @@ Pocketshphinx is set with American english dictionary.
   - `video_to_audio_for_pocketsphinx.js`
 - [X] Audio to text (pocketSphinx speech to text)
   - `pocketsphinx.js`
-- [X]Pocketshphinx text to hypertranscript
+- [X] Pocketshphinx text to hypertranscript
   - `pocketsphinx_converter.js`
 - [X] hypertranscript to srt
   - `hypertranscript_to_srt.js`
