@@ -10,6 +10,12 @@ Pocketshphinx is set with American english dictionary.
 
 Refactoring in progress, more info coming soon...
 
+
+## Usage
+
+See `./tests/test_main.js` as an example on how to get an srt from a video file. 
+If prefered you can also get a json "hypertranscripts" with word accurate timings instead.
+
 ## Structure
 
 - [X] Video to audio (following pocketSphinx specs)  
