@@ -8,9 +8,10 @@ var pocketSphinxTextConverter= require('../pocketsphinx_converter.js');
 
 pocketSphinx.convert('../test.mp4.temp.wav',function(pocketsphinx_text){
   console.log(pocketsphinx_text)
+  console.log("here")
 
-  pocketSphinxTextConverter.convert(pocketsphinx_text, function(hypertranscript){
-    console.log(hypertranscript)
-  })
+  // pocketSphinxTextConverter.convert(pocketsphinx_text, function(hypertranscript){
+  //   console.log(hypertranscript)
+  // })
 
 })

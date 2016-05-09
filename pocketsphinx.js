@@ -7,7 +7,7 @@ var spawn = require('child_process').spawn;
 * returns string of transcription formatted by pocketSphinx see line 43 for example
 */
 function pocketSphinx(path, cb) {
-
+  console.log("entering pocketSphinx function")
   var filename = path.replace('.temp.wav', '') + '.transcription.txt';
 
   var args = [
@@ -39,6 +39,7 @@ function pocketSphinx(path, cb) {
 
   var transcript = '';
   ps.stdout.on('data', function(data) {
+
     console.log("transcribing...")
     transcript += '' + data;
 //console.log(transcript)
@@ -62,8 +63,15 @@ function pocketSphinx(path, cb) {
 }
 
 
+// pocketSphinx('./test.mp4.temp.wav',function(pocketsphinx_text){
+//   console.log(pocketsphinx_text)
+//   console.log("here")
+//
+//   // pocketSphinxTextConverter.convert(pocketsphinx_text, function(hypertranscript){
+//   //   console.log(hypertranscript)
+//   // })
+//
+// })
 
 
-
-
-module.exports.convert = pocketSphinx;
+module.exports = pocketSphinx;

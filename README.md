@@ -13,8 +13,11 @@ Refactoring in progress, more info coming soon...
 
 ## Usage
 
-See `./tests/test_main.js` as an example on how to get an srt from a video file. 
+See `./tests/test_main.js` as an example on how to get an srt from a video file.
 If prefered you can also get a json "hypertranscripts" with word accurate timings instead.
+
+
+`npm test` to try it out
 
 ## Structure
 

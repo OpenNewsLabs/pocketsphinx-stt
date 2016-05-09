@@ -8,10 +8,12 @@ var hypertranscriptToSrt  = require('./hypertranscript_to_srt.js');
 //convert to SRT
 function  convert_to_srt(video_filename, cb){
   videoToAudio.convert(video_filename, function(audio_filename){
-    audioToText.convert(audio_filename, function(text){
+    audioToText(audio_filename, function(text){
       textToHypertranscript.convert(text, function(hp){
         hypertranscriptToSrt.convert(hp,function(srt_content){
+
           cb(srt_content)
+
         } )
       })
     })
@@ -21,22 +23,38 @@ function  convert_to_srt(video_filename, cb){
 
 //Convert to hyprtranscript
 function  convert_to_hp(video_filename, cb){
-  videoToAudio.convert(video_filename, function(audio_filename){
-    audioToText.convert(audio_filename, function(text){
-      textToHypertranscript.convert(text, function(hp){
+  console.log("Flag1")
+  console.log(video_filename)
 
+
+  videoToAudio.convert(video_filename, function(audio_filename){
+    console.log("Flag2")
+      console.log(audio_filename)
+
+
+    audioToText(audio_filename, function(text){
+      console.log("Flag3")
+      console.log(text)
+      textToHypertranscript.convert(text, function(hp){
+        console.log("Flag4")
           cb(hp)
 
       })
     })
+
+
+
   })
+
+
+
 }
 
 
 /**
 * Writing to file.
 * takes in file name and content as parameters
-* TODO: add callback to do something once file has been written 
+* TODO: add callback to do something once file has been written
 */
 function writeToFile(fileName,content){
   fs.writeFile(fileName, content, {
@@ -57,7 +75,7 @@ function writeToFile(fileName,content){
    hypertranscriptToSrt: hypertranscriptToSrt.convert,
 
    convert_video_to_srt:  convert_to_srt,
-   convert_video_to_hypertranscriptp: convert_to_hp,
+   convert_video_to_hypertranscript: convert_to_hp,
 
    writeToFile: writeToFile
  };
