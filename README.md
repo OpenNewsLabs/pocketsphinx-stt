@@ -2,7 +2,7 @@
 
 Speech to text module extracted from Video grep, mac app.
 
-It uses Pocketshphinx and ffmpeg binraries for os x. To run on a linux server you'd need to get(or compile) those binaries for linux.
+It uses Pocketshphinx and ffmpeg binaries for os x. To run on a linux server you'd need to get (or compile) those binaries for linux.
 
 Pocketshphinx is set with American english dictionary.
 
