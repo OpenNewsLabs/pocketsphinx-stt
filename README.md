@@ -66,7 +66,7 @@ Check out and try the example usage `node src/example-usage.js` for more
 
 ### Example output
 
-[Digital Paper Edit](https://github.com/bbc/digital-paper-edit-electron) 
+Uses json format for transcript from [Digital Paper Edit](https://github.com/bbc/digital-paper-edit-electron) project.
 
 ```js
 { words:
