@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "publish:dry:run": "npm publish --dry-run"
   },
   "author": "Pietro Passarelli  <pietro.passarelli@gmail.com.com> (http://pietropassarelli.com)",
   "license": "ISC",
