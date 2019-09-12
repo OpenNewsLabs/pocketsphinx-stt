@@ -2,9 +2,11 @@
 Speech to text module initially [Video grep Mac OSX Electron app](https://github.com/antiboredom/videogrep), by Sam Lavine [@sam_lavigne](https://twitter.com/sam_lavigne)
 
 
+
 Then refactored as part of [autoEdit](https://github.com/OpenNewsLabs/autoEdit_2), and subsequently as part of [Digital Paper Edit](https://github.com/bbc/digital-paper-edit-electron) app.
 
-<!-- It uses Pocketshphinx and ffmpeg binraries for os x. To run on a linux server you'd need to get(or compile) those binaries for linux. -->
+<!-- It uses Pocketshphinx and ffmpeg binaries for os x. To run on a linux server you'd need to get (or compile) those binaries for linux. -->
+
 
 Pocketshphinx is set with American english dictionary.
 
