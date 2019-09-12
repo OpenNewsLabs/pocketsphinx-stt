@@ -1,12 +1,17 @@
 {
-  "name": "speech_to_text",
-  "version": "1.0.0",
-  "description": "pocketsphinx speech to text offline transcriber",
+  "name": "pocketsphinx-stt",
+  "version": "2.0.0",
+  "description": "pocketsphinx speech to text - offline",
   "main": "main.js",
   "scripts": {
-    "test": "node ./tests/test_main.js",
-    "start": "node main.js"
+    "test": "echo \"Error: no test specified\"",
+    "start": "node src/index.js",
+    "publish:dry:run": "npm publish --dry-run"
   },
   "author": "Pietro Passarelli  <pietro.passarelli@gmail.com.com> (http://pietropassarelli.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ffmpeg-static-electron": "^2.0.1",
+    "fluent-ffmpeg": "^2.1.2"
+  }
 }
