@@ -22,7 +22,6 @@ const convertAndTranscribe = async (inputFilePath, audioFileOutput) =>{
    return transcript;
 }
 
-
 module.exports = convertAndTranscribe;
 module.exports.transcribe = transcribe;
 module.exports.convertAndTranscribe = convertAndTranscribe;

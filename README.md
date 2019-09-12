@@ -4,7 +4,7 @@ Speech to text module initially [Video grep Mac OSX Electron app](https://github
 
 Then refactored as part of [autoEdit](https://github.com/OpenNewsLabs/autoEdit_2), and subsequently as part of [Digital Paper Edit](https://github.com/bbc/digital-paper-edit-electron) app.
 
-It uses Pocketshphinx and ffmpeg binraries for os x. To run on a linux server you'd need to get(or compile) those binaries for linux.
+<!-- It uses Pocketshphinx and ffmpeg binraries for os x. To run on a linux server you'd need to get(or compile) those binaries for linux. -->
 
 Pocketshphinx is set with American english dictionary.
 
@@ -30,23 +30,43 @@ _npm coming soon_
 <!-- ```
 npm install pocketsphinx-stt
 ```
+ -->
 
-There are two options, one expect the file to be already an audio file that can work with pocketsphixn the other will convert it 
+There are two options, one expect the file to be already an audio file that can work with pocketsphixn 
+
+<!-- const convertAndTranscribe = require('pocketsphinx-stt') -->
+
 
 ```js
-const convertAndTranscribe = require('pocketsphinx-stt')
+const transcribe = require('./index.js').transcribe;
+const videoFilePath = // some video file
+
+transcribe(videoFilePath)
+    .then((res) => {
+        console.log('transcribe', res);
+    })
+```
+
+
+While the other will use ffmpeg convert the audio or video file to the right format for pocketsphinx.
+```js
+const convertAndTranscribe = require('./index.js').convertAndTranscribe;
 const videoFilePath = // some video file
 
 convertAndTranscribe(videoFilePath)
     .then((res) => {
         console.log('transcribe', res);
     })
-``` -->
+```
 
-Check out and try the example usage `node src/example-usage.js`
+It can take an optional parameter to specifiy where you'd want to save the audio file, if not provided it saves it in the same folder as the original media, with same name but audio extension.
+
+Check out and try the example usage `node src/example-usage.js` for more 
 
 
 ### Example output
+
+[Digital Paper Edit](https://github.com/bbc/digital-paper-edit-electron) 
 
 ```js
 { words:
@@ -67,6 +87,8 @@ Check out and try the example usage `node src/example-usage.js`
 
 ## System Architecture
 <!-- _High level overview of system architecture_ -->
+
+_TBC_
 
 <!-- ## Documentation
 
