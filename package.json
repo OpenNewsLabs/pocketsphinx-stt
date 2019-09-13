@@ -1,6 +1,6 @@
 {
   "name": "pocketsphinx-stt",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "pocketsphinx speech to text - offline",
   "main": "index.js",
   "babel": {
@@ -34,7 +34,12 @@
 
   },
   "author": "Pietro Passarelli  <pietro.passarelli@gmail.com.com> (http://pietropassarelli.com)",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/OpenNewsLabs/pocketsphinx-stt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenNewsLabs/pocketsphinx-stt.git"
+  },
   "dependencies": {
     "ffmpeg-static-electron": "^2.0.1",
     "fluent-ffmpeg": "^2.1.2"
