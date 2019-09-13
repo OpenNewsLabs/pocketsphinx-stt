@@ -1,6 +1,6 @@
 {
   "name": "pocketsphinx-stt",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "pocketsphinx speech to text - offline",
   "main": "index.js",
   "babel": {
@@ -27,8 +27,9 @@
     "test": "echo \"Error: no test specified\"",
     "start": "node src/index.js",
     "build": "babel src -d dist",
-    "prep":"npm run build && rm ./dist/package.json || true && cp package.json ./dist/package.json && rm ./dist/README.md || true && cp README.md ./dist/README.md || true",
-    "publish:public": "npm run prep && npm publish dist --access public",
+    "package:pocketsphinx":"rm -f ./dist/pocketsphinx-stt/sphinxbase/ || true && cp -r ./src/pocketsphinx-stt/sphinxbase ./dist/pocketsphinx-stt/sphinxbase && rm -rf ./dist/pocketsphinx-stt/pocketsphinx || true && cp -r ./src/pocketsphinx-stt/pocketsphinx ./dist/pocketsphinx-stt/pocketsphinx",
+    "package:js":"npm run build && rm ./dist/package.json || true && cp package.json ./dist/package.json && rm ./dist/README.md || true && cp README.md ./dist/README.md || true",
+    "publish:public": "npm run package:js && npm run package:pocketsphinx && npm publish dist --access public",
     "publish:dry:run": "npm publish --dry-run",
     "lint:fix": "eslint ./packages/* --fix"
 
