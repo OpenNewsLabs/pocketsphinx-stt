@@ -27,20 +27,16 @@ npm install
 
 ## Usage
 
-_npm coming soon_
 
-<!-- ```
+```
 npm install pocketsphinx-stt
 ```
- -->
+
 
 There are two options, one expect the file to be already an audio file that can work with pocketsphixn 
 
-<!-- const convertAndTranscribe = require('pocketsphinx-stt') -->
-
-
 ```js
-const transcribe = require('./index.js').transcribe;
+const transcribe = require('pocketsphinx-stt').transcribe;
 const videoFilePath = // some video file
 
 transcribe(videoFilePath)
@@ -52,7 +48,7 @@ transcribe(videoFilePath)
 
 While the other will use ffmpeg convert the audio or video file to the right format for pocketsphinx.
 ```js
-const convertAndTranscribe = require('./index.js').convertAndTranscribe;
+const convertAndTranscribe = require('pocketsphinx-stt').convertAndTranscribe;
 const videoFilePath = // some video file
 
 convertAndTranscribe(videoFilePath)
@@ -123,7 +119,10 @@ Node version is set in node version manager [`.nvmrc`](https://github.com/creati
 ## Build
 <!-- _How to run build_ -->
 
-_NA_
+```
+npm run build
+```
+packages via babel, in `dist` folder
 
 <!-- TODO: might need transpiling? -->
 
@@ -135,4 +134,10 @@ _NA_
 ## Deployment
 <!-- _How to deploy the code/app into test/staging/production_ -->
 
-_NA_
+On npm 
+
+```
+npm run publish:public
+```
+
+Runs build and then publishes `dist` folder to npm  with copy of `README` and `package.json`

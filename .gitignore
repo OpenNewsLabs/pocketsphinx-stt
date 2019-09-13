@@ -38,3 +38,6 @@ node_modules
 *.wav
 *.srt
 *.mp4.json
+
+
+dist/

@@ -2,16 +2,47 @@
   "name": "pocketsphinx-stt",
   "version": "2.0.0",
   "description": "pocketsphinx speech to text - offline",
-  "main": "main.js",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": "10.16.3"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "start": "node src/index.js",
-    "publish:dry:run": "npm publish --dry-run"
+    "build": "babel src -d dist",
+    "prep":"npm run build && rm ./dist/package.json || true && cp package.json ./dist/package.json && rm ./dist/README.md || true && cp README.md ./dist/README.md || true",
+    "publish:public": "npm run prep && npm publish dist --access public",
+    "publish:dry:run": "npm publish --dry-run",
+    "lint:fix": "eslint ./packages/* --fix"
+
   },
   "author": "Pietro Passarelli  <pietro.passarelli@gmail.com.com> (http://pietropassarelli.com)",
   "license": "ISC",
   "dependencies": {
     "ffmpeg-static-electron": "^2.0.1",
     "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.6.0"
   }
 }
