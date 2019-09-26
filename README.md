@@ -27,6 +27,7 @@ npm install
 
 ## Usage
 
+on npm [`pocketsphinx-stt`](https://www.npmjs.com/package/pocketsphinx-stt)
 
 ```
 npm install pocketsphinx-stt
