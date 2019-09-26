@@ -37,13 +37,12 @@ npm install pocketsphinx-stt
 There are two options, one expect the file to be already an audio file that can work with pocketsphixn 
 
 ```js
-const transcribe = require('pocketsphinx-stt').transcribe;
+const transcribe = require('pocketsphinx-stt');
 const videoFilePath = // some video file
 
-transcribe(videoFilePath)
-    .then((res) => {
-        console.log('transcribe', res);
-    })
+transcribe(videoFilePath).then((transcript)=>{
+  // Do something with the transcript
+})
 ```
 
 
