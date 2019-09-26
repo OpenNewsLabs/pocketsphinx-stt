@@ -1,6 +1,6 @@
 {
     "name": "pocketsphinx-stt",
-    "version": "3.0.0",
+    "version": "3.0.0-alpha.1",
     "description": "pocketsphinx speech to text - offline",
     "main": "index.js",
     "babel": {
