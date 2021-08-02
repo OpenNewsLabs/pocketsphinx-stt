@@ -34,7 +34,7 @@ npm install pocketsphinx-stt
 ```
 
 
-There are two options, one expect the file to be already an audio file that can work with pocketsphixn 
+There are two options, one expect the file to be already an audio file that can work with pocketsphinx 
 
 ```js
 const transcribe = require('pocketsphinx-stt').transcribe;
